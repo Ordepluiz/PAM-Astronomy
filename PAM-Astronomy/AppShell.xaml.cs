@@ -1,4 +1,4 @@
-﻿namespace PAM_Astronomy
+﻿ namespace PAM_Astronomy
 {
     public partial class AppShell : Shell
     {
