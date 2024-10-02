@@ -9,28 +9,30 @@
     Title="PAM_Astronomy">
 
     <Shell.FlyoutHeader>
-        <Grid HeightRequest="100"
-            BackgroundColor="DarkSlateBlue">
-                <Image Source="moon.png" />
+        <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
+            <Image Source="moon.png" />
         </Grid>
     </Shell.FlyoutHeader>
-    
-    <FlyoutItem Title="Sunrise">
-        <ShellContent
-            ContentTemplate="{DataTemplate local:SunriseView}"/>
+
+    <FlyoutItem Title="Sunrise" FlyoutIcon="sunrise.png">
+        <ShellContent ContentTemplate="{DataTemplate local:SunriseView}" />
     </FlyoutItem>
-    <FlyoutItem Title="About">
-        <ShellContent
-            ContentTemplate="{DataTemplate local:AboutPageView}"/>
+
+    <FlyoutItem Title="About" FlyoutIcon="info.png">
+        <ShellContent ContentTemplate="{DataTemplate local:AboutPageView}" />
     </FlyoutItem>
-    
-    <FlyoutItem Title="Moon Phase">
-        <ShellContent
-            
-            Title="MoonPhase"
-            ContentTemplate="{DataTemplate local:MoonPhaseView}"
-            Route="MoonPhaseView" />
+
+    <FlyoutItem Title="Moon Phase" FlyoutIcon="moon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MoonPhaseView}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Astronomy" Icon="moon.png">
+        <ShellContent Title="Moon" ContentTemplate="{DataTemplate local:MoonPhaseView}" />
+        <ShellContent Title="Daylight" Icon="sun.png" ContentTemplate="{DataTemplate local:SunriseView}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="About" Icon="info.png">
+        <ShellContent Title="About" ContentTemplate="{DataTemplate local:AboutPageView}" />
     </FlyoutItem>
 
 </Shell>
-
